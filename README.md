@@ -29,16 +29,16 @@ FROM python:3.10
 
 WORKDIR /app
 
-# Copiar archivos
+### Copiar archivos
 COPY app.py .
 COPY models/ ./models/
 
-# Instalar dependencias
+### Instalar dependencias
 RUN pip install flask joblib scikit-learn
 
 EXPOSE 5001
 
-# Comando de inicio
+### Comando de inicio
 CMD ["python", "app.py"]
 
 
